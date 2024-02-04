@@ -46,7 +46,7 @@
         @include helpers.flex-center
         justify-content: flex-end
     #centerLayout
-        @include helpers.flex-columm-gap(2rem)
+        @include helpers.flex-columm-gap(.7rem)
         justify-content: space-between
         min-height: 100vh
         
@@ -171,4 +171,13 @@
         font-size: 1.4rem
         font-weight: bold
     
- 
+.loader
+    width: 14px
+    height: 14px
+    border-radius: 50%
+    border: 2px solid #ccc
+    border-top-color: #a5a2a263
+    animation: loading 1s linear infinite
+    @keyframes loading
+        to
+            transform: rotate(360deg)

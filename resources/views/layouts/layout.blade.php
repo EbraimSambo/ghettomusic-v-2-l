@@ -14,13 +14,7 @@
 
     </head>
     <body>
-        <div id="appLayout"
-            @if(request()->exists('search') && !empty(request('search')))
-            x-data="{ showModal: true }"
-            @else
-                x-data="{ showModal: false }"
-            @endif
-            >
+        <div id="appLayout" @if(request()->exists('search') && !empty(request('search'))) x-data="{ showModal: true }"   @else   x-data="{ showModal: false }"    @endif   >
            <x-app.sidebar />
            <div id="leftLayout">
                 <livewire:components.navegation >

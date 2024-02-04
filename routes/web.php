@@ -1,6 +1,8 @@
 <?php
 
 use App\Livewire\Pages\HomePage;
+use App\Livewire\Pages\Music\MusicCreate;
+use App\Livewire\Pages\Music\SinglePage;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,7 +21,9 @@ Route::get('/', HomePage::class)->name('home');
 Route::prefix('music')->name('music.')->group(function () {
 
     Route::get('/', HomePage::class)->name('home');
-
+    Route::get('/create', MusicCreate::class)->name('create');
+    Route::get('/show/{slug}', SinglePage::class)->name('show');
+    
 });
 
 Route::view('dashboard', 'dashboard')

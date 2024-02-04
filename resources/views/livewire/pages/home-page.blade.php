@@ -1,6 +1,6 @@
 <div class="page-container">
-    Home
-    <div x-data="{name: 'sambo'}">
-       <p x-text="name"></p>
-    </div>
+    <section id="new-musics">
+      <h2 class="heading"> Ultimos Lançamentos </h2>
+       <x-app.music.music-container :musics="$new" />
+    </section>
 </div>
