@@ -16,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomePage::class)->name('home');
 
+Route::prefix('music')->name('music.')->group(function () {
+
+    Route::get('/', HomePage::class)->name('home');
+
+});
+
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');

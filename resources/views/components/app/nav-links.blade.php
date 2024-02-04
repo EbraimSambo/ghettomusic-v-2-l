@@ -21,7 +21,7 @@
     </a></li>
 
     <li>
-      <span class="bi-search search-btn"></span>
+      <span  @click="showModal=true" class="bi-search search-btn"></span>
     </li>
 
 </ul>

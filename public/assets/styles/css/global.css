@@ -36,6 +36,23 @@ button {
   cursor: pointer;
 }
 
+.btn {
+  background: rgba(165, 162, 162, 0.3882352941);
+  padding: 0.9rem 1.2rem;
+  border-radius: 0.4rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.heading {
+  font-size: 1.6rem;
+}
+
+.danger {
+  font-size: 1.1rem;
+  color: #d40404;
+}
+
 #appLayout {
   position: relative;
   display: grid;
@@ -204,6 +221,67 @@ button {
 }
 #global-footer #links-social a {
   font-size: 1.3rem;
+}
+
+#search-container {
+  font-size: 1.5rem;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(18, 18, 18, 0.7529411765);
+  z-index: 1000;
+  display: flex;
+}
+#search-container .container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+#search-container .container .top-search {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+#search-container .container .top-search form {
+  width: 100%;
+  height: 40px;
+  border: 0.1rem solid #fff;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0 1.5rem;
+  border-radius: 2rem;
+  background: rgba(18, 18, 18, 0.8431372549);
+}
+#search-container .container .top-search form input, #search-container .container .top-search form button {
+  background: transparent;
+  color: #fff;
+}
+#search-container .container .top-search form input {
+  font-size: 1.2rem;
+}
+#search-container .container .top-search form input::placeholder {
+  color: #fff;
+}
+#search-container .close-search {
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  background: transparent;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=global.css.map */
