@@ -25,27 +25,27 @@ enum CategoresType: string {
         return match ($this) {
             self::RAP => [
                 'title'=> 'Rap',
-                'cover'=>'images/grafics/4.jpg',
+                'cover'=>'images/grafics/categores/4.jpg',
             ],
             self::KIZOMBA => [
                 'title'=> 'Kizomba',
-                'cover'=>'images/grafics/2.jpg'
+                'cover'=>'images/grafics/categores/2.jpg'
             ],
             self::KUDURO =>[
                 'title'=> 'Kuduro',
-                'cover'=>'images/grafics/6.jpg'
+                'cover'=>'images/grafics/categores/6.jpg'
             ],
             self::SEMBA => [
                 'title'=> 'Semba',
-                'cover'=>'images/grafics/1.jpg'
+                'cover'=>'images/grafics/categores/1.jpg'
             ],
             self::AFROBEAT => [
                 'title'=> 'Afrobeat',
-                'cover'=>'images/grafics/3.jpg'
+                'cover'=>'images/grafics/categores/3.jpg'
             ],
             self::AFROHOUSE => [
                 'title'=> 'Afrohouse',
-                'cover'=>'images/grafics/5.jpg'
+                'cover'=>'images/grafics/categores/5.jpg'
             ],
         };
     }

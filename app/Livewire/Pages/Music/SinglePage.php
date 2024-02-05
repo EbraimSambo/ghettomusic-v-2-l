@@ -14,6 +14,8 @@ class SinglePage extends Component
     }
     public function render()
     {
-        return view('livewire.pages.music.single-page')->layout('layouts.layout',['title'=>'Mostrar']);
+        return view('livewire.pages.music.single-page',[
+            'similars'=> $this->music->all()->where('category', $this->music->category),
+        ])->layout('layouts.layout',['title'=>'Ouvir ou baixar ' .$this->music->title]);
     }
 }

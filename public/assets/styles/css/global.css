@@ -420,7 +420,7 @@ button {
 }
 
 #single-page #container-desc #content {
-  margin: 0 auto;
+  margin: 2rem auto;
   max-width: 680px;
   width: 100%;
   display: flex;
@@ -478,6 +478,62 @@ button {
 #single-page #container-desc #content .cover {
   height: 250px;
   width: 250px;
+}
+
+.tops {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(75, 73, 73, 0.337254902);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 6px;
+}
+.tops .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tops .content .div-1 {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.tops .content .div-1 .cover {
+  width: 60px;
+  height: 60px;
+}
+.tops .content .div-1 .desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.tops .content .div-1 .desc h2 {
+  font-size: 1.1rem;
+}
+.tops .content .div-1 .desc h3 {
+  font-size: 0.9rem;
+}
+.tops .content .div-2 {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.tops .content .div-2 .counter-time {
+  font-size: 14px;
+  font-weight: bold;
+}
+.tops .content .div-2 button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #32323d;
+  padding: 6px;
+  border: 2px solid #464748;
+  border-radius: 6px;
+  color: #fff;
 }
 
 /*# sourceMappingURL=global.css.map */

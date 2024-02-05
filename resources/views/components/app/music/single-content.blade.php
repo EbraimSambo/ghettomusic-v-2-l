@@ -1,4 +1,4 @@
-@props(['music'])
+@props(['music','similars'])
 <div id="container">
     <div id="container-desc">
         <div id="content">
@@ -6,15 +6,6 @@
             <livewire:components.music.legend-conter :music="$music" />
         </div>
 
-        <div class="tops">
-           <div class="container">
-              <div class="cover">
-                
-              </div>
-
-           </div>
-
-        </div>
+        <x-app.music.top :datas="$similars" />
     </div>
-
 </div>    

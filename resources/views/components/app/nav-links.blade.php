@@ -1,5 +1,5 @@
 <ul id="nav-links">
-    <li><a href="" wire:navigate>
+    <li><a href="{{route('home')}}" wire:navigate>
         <span class="material-symbols-outlined">
         home
         </span> 
@@ -13,7 +13,7 @@
         <span>Músicas</span> 
     </a></li>
 
-    <li><a href="" wire:navigate>
+    <li><a href="{{route('music.categores.categores')}}" wire:navigate>
         <span class="material-symbols-outlined">
             lists
         </span>
