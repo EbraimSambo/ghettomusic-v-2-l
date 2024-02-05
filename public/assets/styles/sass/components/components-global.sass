@@ -7,6 +7,8 @@
     grid-template-columns: minmax(0,2fr) minmax(0,8fr)
     gap: .7rem
     min-height: 100vh
+    @include helpers.responsive($w: 991px)
+        grid-template-columns: minmax(100%,1fr)
     &,a
         color: map-get(variables.$colors, textColor)
     #sidebar, #global-footer, main
@@ -16,6 +18,8 @@
         height: 100vh
         background: #121212
         box-shadow: 0 .2rem .5rem rgba(0,0,0,.4)
+        @include helpers.responsive($w: 991px)
+            display: none
         position: sticky
         top: 0
         bottom: 0

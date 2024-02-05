@@ -5,7 +5,7 @@ namespace App\Livewire\Components\Music;
 use App\Models\Music;
 use Livewire\Component;
 
-class LegendConter extends Component
+class LegendCounter extends Component
 {
     public Music $music;
     public $count;
@@ -22,6 +22,6 @@ class LegendConter extends Component
     }
     public function render()
     {
-        return view('livewire.components.music.legend-conter');
+        return view('livewire.components.music.legend-counter');
     }
 }

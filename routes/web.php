@@ -2,6 +2,7 @@
 
 use App\Livewire\Pages\HomePage;
 use App\Livewire\Pages\Music\Categores\CategoresPage;
+use App\Livewire\Pages\Music\Categores\CategoryPage;
 use App\Livewire\Pages\Music\MusicCreate;
 use App\Livewire\Pages\Music\SinglePage;
 use Illuminate\Support\Facades\Route;
@@ -29,7 +30,7 @@ Route::prefix('music')->name('music.')->group(function () {
 
     Route::prefix('categores')->name('categores.')->group(function (){
         Route::get('/', CategoresPage::class)->name('categores');
-        Route::get('/category/{category}', CategoresPage::class)->name('category');
+        Route::get('/category/{category}', CategoryPage::class)->name('category');
     });
     
 });
