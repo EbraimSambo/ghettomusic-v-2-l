@@ -12,7 +12,7 @@ class CategoryPage extends Component
 
     public function mount($category, Music $music) {
         $this->categoryPage = urldecode($category);
-        $category = $music->where('category', $category);
+        $this->category = $music->all()->where('category', $category);
     }
     public function render()
     {

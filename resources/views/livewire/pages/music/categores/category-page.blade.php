@@ -1,12 +1,20 @@
 <div class="page-container">
-    <section class="banner">
-    @foreach (\App\Enums\CategoresType::cases() as $category)
-        @if ($category->value === $categoryPage)
-        <div class="container">
-            <h1>O melhor da música {{ucfirst($category->value)}}</h1>
-        </div>
-            <img src="{{ asset('assets/'. $category->typeIndex()['banner']) }}" alt="{{ $category->typeIndex()['title'] }}">
-        @endif
-    @endforeach
-    </section>
+    <x-app.music.banner-category :categoryPage="$categoryPage" />
+    @unless (count($category)==0)
+        <section id="musics">
+            <h2 class="heading"> Musicas relacionadas a {{ucfirst($categoryPage)}} </h2>
+            <x-app.music.music-container :musics="$category" />
+        </section>
+
+        <section id="musics">
+            <h2 class="heading"> Outras Categorias</h2>
+            <x-app.music.categores-container  />
+        </section>   
+    @else
+        <section id="musics">
+            <h2 class="heading"> Não há musicas criada no estilo {{ucfirst($categoryPage)}}, tente proucurar outras a baixo:</h2>
+            <x-app.music.categores-container  />
+        </section>     
+    @endunless
+
 </div>
