@@ -22,13 +22,13 @@ Route::get('/', HomePage::class)->name('home');
 Route::prefix('music')->name('music.')->group(function () {
 
     Route::get('/', HomePage::class)->name('home');
-    
+
     Route::get('/create', MusicCreate::class)->name('create');
 
     Route::get('/show/{slug}', SinglePage::class)->name('show');
 
     Route::prefix('categores')->name('categores.')->group(function (){
-        Route::get('/categores', CategoresPage::class)->name('categores');
+        Route::get('/', CategoresPage::class)->name('categores');
         Route::get('/category/{category}', CategoresPage::class)->name('category');
     });
     

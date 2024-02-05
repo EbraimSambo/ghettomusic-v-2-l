@@ -111,6 +111,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  z-index: 999;
 }
 #appLayout #centerLayout {
   display: flex;
@@ -534,6 +535,23 @@ button {
   border: 2px solid #464748;
   border-radius: 6px;
   color: #fff;
+}
+
+#container-categores {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+}
+#container-categores li {
+  position: relative;
+}
+#container-categores li h3 {
+  position: absolute;
+  top: 4%;
+  left: 4%;
+  font-size: 2.2rem;
+  text-shadow: 1px 1px 1px #111;
 }
 
 /*# sourceMappingURL=global.css.map */
