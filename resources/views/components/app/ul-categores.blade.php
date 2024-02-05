@@ -2,7 +2,7 @@
     <h2>Categorias</h2>
     <ul class="ul-sidebar">
         @foreach (\App\Enums\CategoresType::cases() as $category)
-            <li><a href=" {{ route('home')}} " wire:navigate>
+            <li><a href=" {{ route('music.categores.category', $category->value)}} " wire:navigate>
                 <span @class(['p-4', $category->covers(), ]) ></span>
                 <span>{{$category->value}}</span>  
             </a></li>
