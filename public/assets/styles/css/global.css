@@ -63,6 +63,14 @@ button {
   color: #d40404;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.relce {
+  color: #e0e40b;
+}
+
 #appLayout {
   position: relative;
   display: grid;
@@ -96,7 +104,7 @@ button {
 }
 @media (max-width: 991px) {
   #appLayout #sidebar {
-    display: none;
+    position: fixed;
   }
 }
 #appLayout #sidebar .top {
@@ -144,7 +152,7 @@ button {
 #nav-links {
   display: flex;
   align-items: center;
-  gap: 0.9rem;
+  gap: 1.3rem;
 }
 #nav-links li a {
   display: flex;
@@ -245,19 +253,11 @@ button {
 }
 
 #search-container {
-  font-size: 1.5rem;
   color: #fff;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background: rgba(18, 18, 18, 0.7529411765);
-  z-index: 1000;
   display: flex;
 }
 #search-container .container {
-  max-width: 900px;
+  max-width: 1024px;
   width: 100%;
   margin: 0 auto;
   padding: 2rem;
@@ -295,14 +295,19 @@ button {
 #search-container .container .top-search form input::placeholder {
   color: #fff;
 }
-#search-container .close-search {
-  position: absolute;
-  top: 3%;
-  left: 5%;
-  background: transparent;
-  color: #fff;
-  font-size: 1.4rem;
-  font-weight: bold;
+#search-container .container .bottom-search {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+#search-container .container .results {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#search-container .container .results p {
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 .loader {
@@ -449,7 +454,7 @@ button {
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
-@media (max-width: 991px) {
+@media (max-width: 891px) {
   #music-container {
     grid-template-columns: repeat(3, 1fr);
   }

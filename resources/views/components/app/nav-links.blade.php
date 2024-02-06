@@ -21,7 +21,10 @@
     </a></li>
 
     <li>
-      <span  @click="showModal=true" class="bi-search search-btn"></span>
+        <a href="{{route('music.search')}}" wire:navigate>
+            <span class="bi-search search-btn"></span>
+            <span>Pesquisar</span> 
+        </a>
     </li>
 
 </ul>

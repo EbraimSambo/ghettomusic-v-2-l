@@ -9,13 +9,13 @@
 
         <!-- Styles -->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link href="{{ asset('assets/styles/css/global.css') }}" media="screen" rel="stylesheet" />
+        <link href="{{ url('assets/styles/css/global.css')  }}" media="screen" rel="stylesheet" />
 
         <!-- Scripts -->
 
     </head>
     <body>
-        <div id="appLayout" @if(request()->exists('search') && !empty(request('search'))) x-data="{ showModal: true }"   @else   x-data="{ showModal: false }"    @endif   >
+        <div id="appLayout"  >
            <x-app.sidebar />
            <div id="leftLayout">
                 <livewire:components.navegation >
@@ -26,7 +26,6 @@
                     <x-app.footer-global />
                 </div>
            </div>
-           <livewire:components.search-container />
         </div>
     </body>
 </html>

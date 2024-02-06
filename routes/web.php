@@ -4,6 +4,7 @@ use App\Livewire\Pages\HomePage;
 use App\Livewire\Pages\Music\Categores\CategoresPage;
 use App\Livewire\Pages\Music\Categores\CategoryPage;
 use App\Livewire\Pages\Music\MusicCreate;
+use App\Livewire\Pages\Music\SearchPage;
 use App\Livewire\Pages\Music\SinglePage;
 use Illuminate\Support\Facades\Route;
 
@@ -27,6 +28,8 @@ Route::prefix('music')->name('music.')->group(function () {
     Route::get('/create', MusicCreate::class)->name('create');
 
     Route::get('/show/{slug}', SinglePage::class)->name('show');
+
+    Route::get('/search', SearchPage::class)->name('search');
 
     Route::prefix('categores')->name('categores.')->group(function (){
         Route::get('/', CategoresPage::class)->name('categores');
