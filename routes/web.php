@@ -25,7 +25,7 @@ Route::prefix('music')->name('music.')->group(function () {
 
     Route::get('/', HomePage::class)->name('home');
 
-    Route::get('/create', MusicCreate::class)->name('create');
+    Route::get('/create', MusicCreate::class)->name('create')->middleware(['auth']);
 
     Route::get('/show/{slug}', SinglePage::class)->name('show');
 

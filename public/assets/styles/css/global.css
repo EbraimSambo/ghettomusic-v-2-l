@@ -105,6 +105,10 @@ button {
 @media (max-width: 991px) {
   #appLayout #sidebar {
     position: fixed;
+    width: 300px;
+    right: none;
+    left: -99%;
+    z-index: 1000;
   }
 }
 #appLayout #sidebar .top {
@@ -454,7 +458,7 @@ button {
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
-@media (max-width: 891px) {
+@media (max-width: 851px) {
   #music-container {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -483,6 +487,11 @@ button {
 }
 #music-container .card a .cover {
   height: 200px;
+}
+@media (max-width: 851px) {
+  #music-container .card a .cover {
+    height: 180px;
+  }
 }
 #music-container .card a h2 {
   font-size: 1.3rem;

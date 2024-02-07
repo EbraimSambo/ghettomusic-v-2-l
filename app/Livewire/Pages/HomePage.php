@@ -3,16 +3,19 @@
 namespace App\Livewire\Pages;
 
 use App\Models\Music;
+use Illuminate\Support\Facades\DB;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
 class HomePage extends Component
 {
     #[Title('Home')]
-    public function render()
+    public function render(Music $music)
     {
         return view('livewire.pages.home-page',[
-            'new' => Music::orderBy('id','desc')->paginate(8),
+            'new' => $music->orderBy('id','desc')->paginate(8),
+            'recomended' => $music->inRandomOrder()->take(8)->get(),
+            'tops' => $music->where('download', '>', 0)->orderByDesc('download')->take(8)->get()
         ])->layout('layouts.layout');
     }
 }

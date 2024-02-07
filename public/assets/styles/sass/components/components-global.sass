@@ -18,9 +18,14 @@
         height: 100vh
         background: #121212
         box-shadow: 0 .2rem .5rem rgba(0,0,0,.4)
+        position: sticky
         @include helpers.responsive($w: 991px)
             position: fixed
-        position: sticky
+            width: 300px
+            right: none
+            left: -99%
+            z-index: 1000
+        
         top: 0
         bottom: 0
         right: 0
